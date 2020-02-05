@@ -15,32 +15,34 @@ public class Code {
 		//30.0 – 39.9	Obese
 		//40.0 and Above	Extremely Obese 
 			double pounds = 0;
+			double feet = 0;
+			double inches = 0;
 			double height = 0;
 			
 			Scanner in = new Scanner(System.in);
 			
 			int tryAgain = 1 ;
 			while(tryAgain != 0) {
-			System.out.println("BMI Calculator. Please enter your weight in pounds: ");
-			pounds = in.nextDouble();
-			double conversionForWeight = pounds/2.205; 
-			System.out.println("Please enter your height in inches: ");
-			height = in.nextDouble(); 
-			double conversionForHeight = height/39.37; 
+			System.out.println("Body Mass Index Calculator. Please enter your weight in pounds: ");
+			pounds = in.nextDouble(); 
+			System.out.println("Please enter your height in whole feet here: ");
+			feet = in.nextDouble(); 
+			System.out.println("Please enter the remainder of your height in inches here: ");
+			inches = in.nextDouble();
 			
-			if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight <= 18.99) { 
+			if (pounds*703 / Math.pow((feet*12 + inches), 2) <= 18.99) { 
 				System.out.println("Your BMI weight status is Underweight.");
 			}
-			else if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight <= 24.9) {
+			else if (pounds*703 / Math.pow((feet*12 + inches), 2) <= 24.9) {
 				System.out.println("Your BMI weight status is Normal. You are at a healthy weight.");
 			}
-			else if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight <= 25.0) {
+			else if (pounds*703 / Math.pow((feet*12 + inches), 2) <= 25.0) {
 				System.out.println("Your BMI weight status is Overweight.");
 			}
-			else if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight <= 30.0) {
+			else if (pounds*703 / Math.pow((feet*12 + inches), 2) <= 30.0) {
 			System.out.println("Your BMI weight status is Obese.");
 			}
-			else if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight >= 40.0) { 
+			else if (pounds*703 / Math.pow((feet*12 + inches), 2) >= 40.0) { 
 			System.out.println("Your BMI weight status is Extremely Obese.");
 			}
 			System.out.println("To exit the BMI Calulator, Enter 0. To continue, enter any whole number: "); 
