@@ -23,24 +23,24 @@ public class Code {
 			while(tryAgain != 0) {
 			System.out.println("BMI Calculator. Please enter your weight in pounds: ");
 			pounds = in.nextDouble();
-			conversionForWeight = pounds/2.205; 
+			double conversionForWeight = pounds/2.205; 
 			System.out.println("Please enter your height in inches: ");
 			height = in.nextDouble(); 
-			conversionForHeight = height/39.37; 
+			double conversionForHeight = height/39.37; 
 			
-			if (Math.pow(pounds/39.37,  2) / height <= 18.99) { 
+			if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight <= 18.99) { 
 				System.out.println("Your BMI weight status is Underweight.");
 			}
-			else if (Math.pow(pounds, 2) / height <= 24.9) {
+			else if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight <= 24.9) {
 				System.out.println("Your BMI weight status is Normal. You are at a healthy weight.");
 			}
-			else if (Math.pow(pounds,  2) / height <= 25.0) {
+			else if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight <= 25.0) {
 				System.out.println("Your BMI weight status is Overweight.");
 			}
-			else if (Math.pow(pounds,  2) / height <= 30.0) {
+			else if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight <= 30.0) {
 			System.out.println("Your BMI weight status is Obese.");
 			}
-			else if (Math.pow(pounds,  2) / height >= 40.0) { 
+			else if (Math.pow(conversionForWeight/39.37,  2) / conversionForHeight >= 40.0) { 
 			System.out.println("Your BMI weight status is Extremely Obese.");
 			}
 			System.out.println("To exit the BMI Calulator, Enter 0. To continue, enter any whole number: "); 
