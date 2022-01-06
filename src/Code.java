@@ -3,10 +3,11 @@ import java.util.Scanner;
 public class Code {
 
 	public static void main(String[] args) {
-	/* Create a BMI (Body Mass Index) calculator which prompts the user to enter their height (in feet and inches) and their weight (in pounds). The program should give the BMI results (number and category) in a user friendly way.
+	/* Create a BMI (Body Mass Index) calculator which prompts the user to enter their height (in feet and inches) and their weight (in pounds). 
+	The program should give the BMI results (number and category) in a user friendly way.
 	BMI = kg/m2
 	m = in/39.37
-		kg = lb/2.205
+	kg = lb/2.205
 	BMI is calculated when in standard measurements by multiplying pounds by 703 and then divided by height (in inches) squared. 
 	*/
 			double pounds = 0;
